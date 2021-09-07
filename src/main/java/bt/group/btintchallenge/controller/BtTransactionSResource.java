@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
@@ -22,7 +23,7 @@ public class BtTransactionSResource {
         System.out.println("plm");
         String method = "getListCustommers";
         logger.entering(CLASS_NAME, method, id);
-
+        logger.log(Level.INFO, "Richiesta Lista Branches brach_id: {0}", id);
         if (id != null) {
 
             List<Customer> customers = new ArrayList<>();
