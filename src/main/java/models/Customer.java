@@ -1,6 +1,7 @@
 package models;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.StringJoiner;
 
 public class Customer {
@@ -8,13 +9,13 @@ public class Customer {
     private Long id;
     private String firstName;
     private String lastName;
-    private LocalDateTime dateOfBirth;
+    private Date dateOfBirth;
     private String status;
     private Long openBranchId;
     private LocalDateTime insertedDate;
     private String insertedBy;
 
-    public Customer(Long id, String firstName, String lastName, LocalDateTime dateOfBirth, String status, Long openBranchId, LocalDateTime insertedDate, String insertedBy) {
+    public Customer(Long id, String firstName, String lastName, Date dateOfBirth, String status, Long openBranchId, LocalDateTime insertedDate, String insertedBy) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -52,11 +53,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public LocalDateTime getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(LocalDateTime dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
